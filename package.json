@@ -1,0 +1,27 @@
+{
+	"name": "linter-pointerscript",
+	"main": "./lib/main.js",
+	"version": "0.0.0",
+	"description": "Linter for PointerScript",
+	"keywords": [
+		"PointerScript",
+		"linter"
+	],
+	"repository": "https://github.com/M4GNV5/linter-pointerscript",
+	"license": "MIT",
+	"engines": {
+		"atom": ">=1.0.0 <2.0.0"
+	},
+	"dependencies": {
+	},
+	"providedServices": {
+		"linter": {
+			"versions": {
+				"1.0.0": "provideLinter"
+			}
+		}
+	},
+	"scripts": {
+		"install": "gcc --std=gnu99 '-DINTERPRETER_INCLUDE=\"../../lib/syntaxCheck.h\"' PointerScript/parser/ast.c lib/syntaxCheck.c -o lib/ptrs_check"
+	}
+}
