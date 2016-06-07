@@ -26,6 +26,7 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 #define PTRS_HANDLE_DOWHILE NULL
 #define PTRS_HANDLE_FOR NULL
 #define PTRS_HANDLE_FORIN NULL
+#define PTRS_HANDLE_SCOPESTATEMENT NULL
 #define PTRS_HANDLE_EXPRSTATEMENT NULL
 
 #define PTRS_HANDLE_CALL NULL
