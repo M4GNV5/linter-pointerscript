@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	fclose(fd);
 	src[fsize] = 0;
 
-	ptrs_parse(src, argv[1]);
+	ptrs_parse(src, argv[1], NULL);
 	return EXIT_SUCCESS;
 }
 
@@ -57,14 +57,5 @@ void logParseError(ptrs_ast_t *ast, const char *msg, ...)
 	}
 
 	printf("\n%s\n%d\n%d\n", ast->file, line, column);
-
-	while(ast->code[i] != '\n' && ast->code[i] != 0)
-	{
-		i++;
-	}
-	line++;
-	if(ast->code[i++] != 0)
-		ptrs_parse(&ast->code[i], ast->file);
-
 	exit(EXIT_SUCCESS);
 }
