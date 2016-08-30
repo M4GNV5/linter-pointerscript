@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdbool.h>
+#include <ctype.h>
 #include "../PointerScript/parser/ast.h"
 
 int line = 1;
@@ -56,6 +58,20 @@ void logParseError(ptrs_ast_t *ast, const char *msg, ...)
 		}
 	}
 
-	printf("\n%s\n%d\n%d\n", ast->file, line, column);
+	bool startIsAlnum = isalnum(ast->code[ast->codepos]);
+	bool startIsPunct = ispunct(ast->code[ast->codepos]);
+	for(i = ast->codepos + 1; true; i++)
+	{
+		if(startIsAlnum && isalnum(ast->code[i]))
+			;
+		else if(startIsPunct && ispunct(ast->code[i]))
+			;
+		else
+			break;
+	}
+	i -= ast->codepos - column;
+
+	printf("\n%s\n%d\n%d\n%d\n%d\n", ast->file, line, column, line, i);
+	printf("%d | %d\n", startIsAlnum, startIsPunct);
 	exit(EXIT_SUCCESS);
 }
