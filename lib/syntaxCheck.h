@@ -40,6 +40,7 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 #define PTRS_HANDLE_STRINGFORMAT ((void*)1)
 #define PTRS_HANDLE_NEW ((void*)1)
 #define PTRS_HANDLE_MEMBER ((void*)1)
+#define PTRS_HANDLE_THISMEMBER ((void*)1)
 #define PTRS_HANDLE_INDEX ((void*)1)
 #define PTRS_HANDLE_SLICE ((void*)1)
 #define PTRS_HANDLE_AS ((void*)1)
@@ -51,6 +52,11 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 #define PTRS_HANDLE_ASSIGN_DEREFERENCE ((void*)4)
 #define PTRS_HANDLE_ASSIGN_INDEX ((void*)4)
 #define PTRS_HANDLE_ASSIGN_MEMBER ((void*)4)
+#define PTRS_HANDLE_ASSIGN_THISMEMBER ((void*)4)
+
+#define PTRS_HANDLE_CALL_INDEX ((void*)5)
+#define PTRS_HANDLE_CALL_MEMBER ((void*)5)
+#define PTRS_HANDLE_CALL_THISMEMBER ((void*)5)
 
 #define PTRS_HANDLE_OP_TERNARY ((void *)3)
 #define PTRS_HANDLE_OP_INSTANCEOF ((void*)1)
@@ -101,5 +107,11 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 #define PTRS_HANDLE_SUFFIX_INC ((void*)1)
 #define PTRS_HANDLE_SUFFIX_DEC ((void*)1)
 
+#define PTRS_HANDLE_NATIVE_GETINT ((void*)6)
+#define PTRS_HANDLE_NATIVE_SETINT ((void*)6)
+#define PTRS_HANDLE_NATIVE_GETUINT ((void*)6)
+#define PTRS_HANDLE_NATIVE_SETUINT ((void*)6)
+#define PTRS_HANDLE_NATIVE_GETFLOAT ((void*)6)
+#define PTRS_HANDLE_NATIVE_SETFLOAT ((void*)6)
 
 #endif
