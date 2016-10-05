@@ -71,7 +71,6 @@ void logParseError(ptrs_ast_t *ast, const char *msg, ...)
 	}
 	i -= ast->codepos - column;
 
-	printf("\n%s\n%d\n%d\n%d\n%d\n", ast->file, line, column, line, i);
-	printf("%d | %d\n", startIsAlnum, startIsPunct);
+	printf("\n\n%s\n%d\n%d\n%d\n%d\n", ast->file, line, column, line, i);
 	exit(EXIT_SUCCESS);
 }

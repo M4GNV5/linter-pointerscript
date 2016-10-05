@@ -22,6 +22,7 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 #define PTRS_HANDLE_DELETE ((void*)1)
 #define PTRS_HANDLE_THROW ((void*)1)
 #define PTRS_HANDLE_TRYCATCH ((void*)1)
+#define PTRS_HANDLE_ASM ((void*)1)
 #define PTRS_HANDLE_FUNCTION ((void*)1)
 #define PTRS_HANDLE_STRUCT ((void*)1)
 #define PTRS_HANDLE_IF ((void*)1)
@@ -60,6 +61,7 @@ void logParseError(ptrs_ast_t *pos, const char *msg, ...);
 
 #define PTRS_HANDLE_OP_TERNARY ((void *)3)
 #define PTRS_HANDLE_OP_INSTANCEOF ((void*)1)
+#define PTRS_HANDLE_OP_IN ((void*)1)
 #define PTRS_HANDLE_OP_TYPEEQUAL ((void*)1)
 #define PTRS_HANDLE_OP_TYPEINEQUAL ((void*)1)
 #define PTRS_HANDLE_OP_EQUAL ((void*)1)

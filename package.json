@@ -22,6 +22,6 @@
 		}
 	},
 	"scripts": {
-		"install": "gcc --std=gnu99 '-DINTERPRETER_INCLUDE=\"../../lib/syntaxCheck.h\"' PointerScript/parser/ast.c lib/syntaxCheck.c -o lib/ptrs_check"
+		"install": "gcc --std=gnu99 '-DINTERPRETER_INCLUDE=\"../../lib/syntaxCheck.h\"' -IPointerScript/libjitas/src lib/syntaxCheck.c PointerScript/parser/ast.c PointerScript/libjitas/bin/libjitas.a -o lib/ptrs_check"
 	}
 }
